@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de Actividades ITSAO v10</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#eef3f8;color:#243447}
+.top{background:linear-gradient(135deg,#123b63,#1769aa);color:#fff;padding:28px 24px;text-align:center}
+.top h1{margin:0 0 6px;font-size:30px}.top p{margin:0}
+.layout{max-width:1450px;margin:24px auto;padding:0 20px;display:grid;grid-template-columns:1.08fr .92fr;gap:24px}
+.panel{background:#fff;border-radius:14px;padding:24px;box-shadow:0 4px 18px rgba(0,0,0,.08)}
+h2{color:#123b63;margin:0 0 15px}
+h3{color:#1769aa;margin-top:26px}
+label{display:block;font-weight:700;margin:14px 0 6px}
+input,textarea{width:100%;border:1px solid #cbd5df;border-radius:8px;padding:12px 14px;font:inherit;font-size:16px}
+textarea{resize:vertical}
+.tall{min-height:190px}.very-tall{min-height:250px}
+.help{font-size:13px;color:#667;margin:5px 0 8px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+button{border:0;border-radius:9px;padding:12px 16px;font-weight:700;cursor:pointer;margin:5px 4px 0 0}
+.primary{background:#1769aa;color:#fff}.secondary{background:#e8eef5;color:#123b63}.danger{background:#fff0ee;color:#b52f24}
+.actions{position:sticky;bottom:0;background:#fff;padding-top:14px}
+.status{display:none;margin-top:10px;padding:10px;border-radius:8px;background:#eaf6ee;color:#17633a}
+.preview{border:1px solid #d7e0e8;border-radius:10px;overflow:hidden}
+iframe{display:block;width:100%;height:780px;border:0;background:#f4f7fb}
+
+@media(max-width:900px){.layout{grid-template-columns:1fr}.grid{grid-template-columns:1fr}iframe{height:650px}}
+
+/* ===== ESTILOS DE LA PÁGINA GENERADA ===== */
+.generated{--azul:#123b63;--azul2:#1769aa;--fondo:#f4f7fb;--texto:#243447;--rojo:#c0392b;--amarillo:#d99b00}
+.generated body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--fondo);color:var(--texto);line-height:1.6}
+</style>
+</head>
+<body>
+
+<header class="top">
+<h1>Generador de páginas de actividades</h1>
+<p>Plantilla para actividades y entregas · Ingeniería Electrónica · ITSAO</p>
+</header>
+
+<div class="layout">
+
+<section class="panel">
+<h2>1. Encabezado</h2>
+
+<label>Título principal</label>
+<input id="tituloPrincipal" value="Entrega de evidencia">
+
+<label>Subtítulo</label>
+<input id="subtitulo" value="Firma correspondiente al Ejercicio 13 · Ejercicio 18">
+
+<h2 style="margin-top:28px">2. Datos de la actividad</h2>
+
+<div class="grid">
+<div><label>Número de ejercicio</label><input id="ejercicio" value="18"></div>
+<div><label>Número de actividad</label><input id="actividad" value="X"></div>
+</div>
+
+<label>Título del ejercicio</label>
+<input id="titulo" value="Diseño y programación de dos semáforos">
+
+<label>Descripción</label>
+<textarea id="descripcion" class="tall">Con base en el Recurso para la Actividad 1 - T2, diseñar y programar en mBlock la secuencia de funcionamiento de dos semáforos, aplicando estructuras de secuencia, temporización y coordinación entre señales.</textarea>
+
+<label>Fecha límite</label>
+<input id="fecha" value="26 de septiembre de 2026">
+
+<label>Hora límite</label>
+<input id="hora" value="23:59">
+
+<h2 style="margin-top:28px">3. Requerimientos del sistema</h2>
+<p class="help">Escribe un requerimiento por línea. Cada línea se mostrará con una viñeta redonda.</p>
+<textarea id="requerimientos" class="very-tall">Implementación física y simulada: El sistema debe demostrarse tanto de forma virtual como en un circuito físico.
+Control de activación: Incorporar un botón pulsador (push button) que active la secuencia de los semáforos al mantenerse presionado.
+Animación e interfaz: Incluir en la interfaz gráfica de mBlock la animación del flujo vehicular, la cual debe responder adecuadamente a los estados de los semáforos.</textarea>
+
+<h2 style="margin-top:28px">4. Instrucciones de entrega</h2>
+<p class="help">Escribe una instrucción por línea. Se mostrará dentro de un bloque con círculo azul numerado.</p>
+<textarea id="instrucciones" class="very-tall">Entregar una imagen de la firma asignada al ejercicio desarrollado y entregado durante la clase, de acuerdo con las instrucciones proporcionadas en clase.
+La imagen deberá ser clara y legible, permitiendo identificar correctamente la firma.
+Entregar el archivo de simulación con extensión .mblock, respetando el nombre solicitado para la entrega del archivo.
+La entrega del archivo deberá realizarla un solo integrante del equipo.
+Nombrar correctamente los archivos.</textarea>
+</section>
+
+<section class="panel">
+<h2>5. Archivos y entrega</h2>
+
+<label>Nombre del archivo de firma</label>
+<input id="firma" value="ACX - Nombres.jpg">
+
+<label>Nombre del archivo de simulación</label>
+<input id="simulacion" value="ACX - Nombres.mblock">
+
+<label>Enlace de SharePoint</label>
+<input id="enlace" value="https://itsaoedu-my.sharepoint.com/:f:/g/personal/osmar_zanabria_itsao_edu_mx/IgBDlNtMmWMZSIryrcMKORHvAaHMx25WBBsVBoIMSsWG0hg">
+
+<label>URL de la imagen del botón</label>
+<input id="imagen" value="https://i.ibb.co/bfp3Vs2/one.png">
+
+<h2 style="margin-top:28px">6. Notas importantes</h2>
+<p class="help">Escribe una nota por línea. Cada línea se mostrará con una viñeta redonda y texto justificado.</p>
+<textarea id="nota" class="very-tall">Las firmas deberán corresponder a los ejercicios desarrollados y entregados durante las sesiones de clase.
+Las entregas que no cumplan con lo indicado no serán tomadas en cuenta para su evaluación.
+La entrega de esta evidencia es necesaria para registrar y validar los ejercicios realizados y entregados en clase.
+Las evidencias entregadas fuera del tiempo establecido no serán tomadas en cuenta.</textarea>
+
+<h2 style="margin-top:28px">7. Checklist</h2>
+<p class="help">Escribe un elemento por línea. Se mostrará únicamente con viñeta redonda, sin cuadros.</p>
+<textarea id="checklist" class="tall">La firma corresponde al ejercicio realizado en clase.
+La imagen de la firma es clara y legible.
+El archivo tiene extensión .mblock.
+Los nombres de los archivos son correctos.
+Solo un integrante realiza la entrega.
+La entrega se realiza antes de la fecha y hora establecidas.</textarea>
+
+<label>Nombre del archivo HTML</label>
+<input id="nombreArchivo" value="Actividad X – TX.html">
+
+<div class="actions">
+<button class="primary" onclick="actualizar()">Actualizar vista previa</button>
+<button class="primary" onclick="descargar()">Descargar página HTML</button>
+<button class="secondary" onclick="guardar()">Guardar datos</button>
+<button class="secondary" onclick="cargar()">Cargar datos</button>
+<button class="danger" onclick="restablecer()">Restablecer plantilla</button>
+<div id="status" class="status"></div>
+</div>
+
+<h2 style="margin-top:25px">Vista previa</h2>
+<div class="preview"><iframe id="vista"></iframe></div>
+</section>
+
+</div>
+
+<script>
+function esc(s){
+return String(s??'')
+.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+.replace(/"/g,'&quot;');
+}
+function arr(id){
+return document.getElementById(id).value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+}
+function datos(){
+return {
+tituloPrincipal:document.getElementById('tituloPrincipal').value,
+subtitulo:document.getElementById('subtitulo').value,
+ejercicio:document.getElementById('ejercicio').value,
+actividad:document.getElementById('actividad').value,
+titulo:document.getElementById('titulo').value,
+descripcion:document.getElementById('descripcion').value,
+fecha:document.getElementById('fecha').value,
+hora:document.getElementById('hora').value,
+requerimientos:arr('requerimientos'),
+instrucciones:arr('instrucciones'),
+firma:document.getElementById('firma').value,
+simulacion:document.getElementById('simulacion').value,
+enlace:document.getElementById('enlace').value,
+imagen:document.getElementById('imagen').value,
+nota:arr('nota'),
+checklist:arr('checklist'),
+nombreArchivo:document.getElementById('nombreArchivo').value
+};
+}
+
+function generar(d){
+const req=d.requerimientos.map(x=>`<li>${esc(x)}</li>`).join('');
+const inst=d.instrucciones.map(x=>`<li>${esc(x)}</li>`).join('');
+const notas=d.nota.map(x=>`<li>${esc(x)}</li>`).join('');
+const checks=d.checklist.map(x=>`<li>${esc(x)}</li>`).join('');
+
+return `<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>${esc(d.tituloPrincipal)}</title>
+<style>
+:root{--azul:#123b63;--azul2:#1769aa;--fondo:#f4f7fb;--texto:#243447;--rojo:#c0392b;--amarillo:#d99b00}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--fondo);color:var(--texto);line-height:1.6}
+header{background:linear-gradient(135deg,var(--azul),var(--azul2));color:#fff;padding:42px 20px;text-align:center}
+header h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px)}
+header p{margin:0;font-size:18px}
+.container{max-width:1000px;margin:30px auto;padding:0 18px}
+.card{background:#fff;border-radius:16px;padding:26px;margin-bottom:22px;box-shadow:0 5px 18px rgba(0,0,0,.08)}
+h2{color:var(--azul);margin-top:0}
+.badge{display:inline-block;background:#e9f2fb;color:var(--azul);padding:7px 12px;border-radius:20px;font-weight:bold}
+.description{text-align:justify;line-height:1.7}
+.deadline{border-left:6px solid var(--rojo);background:#fff1ef;padding:18px 20px;border-radius:10px;font-weight:bold}
+
+/* REQUERIMIENTOS: viñetas redondas visibles */
+.requirements-list{margin:0;padding-left:30px;list-style:disc}
+.requirements-list li{display:list-item;margin:11px 0;padding-left:3px;text-align:justify;line-height:1.65}
+
+/* INSTRUCCIONES: círculos azules numerados */
+.steps{counter-reset:paso;margin:0;padding:0;list-style:none}
+.steps li{counter-increment:paso;position:relative;margin:12px 0;min-height:56px;padding:14px 18px 14px 78px;background:#f7f9fc;border-radius:10px;text-align:justify;line-height:1.65}
+.steps li::before{content:counter(paso);position:absolute;left:14px;top:12px;width:42px;height:42px;border-radius:50%;background:var(--azul2);color:#fff;text-align:center;line-height:42px;font-weight:bold;font-size:19px}
+
+/* NOTA IMPORTANTE: viñetas redondas */
+.warning{background:#fff0ee;border-left:6px solid var(--rojo);padding:18px;border-radius:10px}
+.note-list{margin:0;padding-left:30px;list-style:disc}
+.note-list li{display:list-item;margin:8px 0;text-align:justify;line-height:1.65}
+
+/* CHECKLIST: solo viñetas, sin cuadros */
+.checklist-list{margin:0;padding-left:30px;list-style:disc}
+.checklist-list li{display:list-item;margin:8px 0;text-align:justify;line-height:1.65}
+
+.delivery{text-align:center;padding:18px 10px}
+.delivery-link{display:inline-block}
+.delivery-link img{display:block;width:140px;max-width:60vw;height:auto;margin:10px auto;cursor:pointer}
+.delivery-text{font-weight:bold;color:var(--azul2)}
+.note{background:#fff8df;border-left:6px solid var(--amarillo);padding:18px;border-radius:10px;text-align:justify}
+footer{text-align:center;padding:30px 15px;color:#667}
+</style>
+</head>
+<body>
+<header><h1>${esc(d.tituloPrincipal)}</h1><p>${esc(d.subtitulo)}</p></header>
+<main class="container">
+
+<section class="card">
+<span class="badge">Ejercicio ${esc(d.ejercicio)}</span>
+<h2>${esc(d.titulo)}</h2>
+<p class="description">${esc(d.descripcion).replace(/\r?\n/g,'<br>')}</p>
+</section>
+
+<section class="card">
+<h2>Requerimientos del sistema</h2>
+<ul class="requirements-list">${req}</ul>
+</section>
+
+<section class="card">
+<h2>Fecha límite</h2>
+<div class="deadline">${esc(d.fecha)} · ${esc(d.hora)} h (CDMX)</div>
+</section>
+
+<section class="card">
+<h2>Instrucciones de entrega</h2>
+<ol class="steps">${inst}</ol>
+</section>
+
+<section class="card">
+<h2>Formato para nombrar los archivos</h2>
+<p>Utilizar el siguiente formato:</p>
+<div class="filename" style="background:#17202a;color:#fff;padding:14px 16px;border-radius:9px;font-family:Consolas,monospace;margin:8px 0">${esc(d.firma)}</div>
+<div class="filename" style="background:#17202a;color:#fff;padding:14px 16px;border-radius:9px;font-family:Consolas,monospace;margin:8px 0">${esc(d.simulacion)}</div>
+<ul>
+<li><strong>AC:</strong> Actividad.</li>
+<li><strong>X:</strong> Número de la actividad.</li>
+<li><strong>Nombres:</strong> Nombres de los integrantes. Ejemplo: Juan - Pedro.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>Entrega del archivo</h2>
+<p><strong>Este archivo no se entregará por este medio; deberá enviarse a través del siguiente enlace:</strong></p>
+<div class="delivery">
+<a class="delivery-link" href="${esc(d.enlace)}" target="_blank" rel="noopener noreferrer">
+<img src="${esc(d.imagen)}" alt="Abrir carpeta de entrega">
+</a>
+<div class="delivery-text">Haz clic en la imagen para realizar la entrega</div>
+</div>
+<div class="note"><strong>Nota:</strong> el enlace abre la carpeta de entrega en una nueva pestaña.</div>
+</section>
+
+<section class="card">
+<h2>Notas importantes</h2>
+<div class="warning"><ul class="note-list">${notas}</ul></div>
+</section>
+
+<section class="card">
+<h2>Checklist </h2>
+<ul class="checklist-list">${checks}</ul>
+</section>
+
+</main>
+<footer><p>Osmar García Zanabria · Ingeniería Electrónica · ITSAO</p></footer>
+</body>
+</html>`;
+}
+
+function actualizar(){
+const d=datos();
+const url=URL.createObjectURL(new Blob([generar(d)],{type:'text/html;charset=utf-8'}));
+document.getElementById('vista').src=url;
+mostrar('Vista previa actualizada.');
+}
+
+function descargar(){
+const d=datos();
+let nombre=d.nombreArchivo.trim()||`Ejercicio_${d.ejercicio}.html`;
+if(!/\.html$/i.test(nombre))nombre+='.html';
+const blob=new Blob([generar(d)],{type:'text/html;charset=utf-8'});
+const url=URL.createObjectURL(blob);
+const a=document.createElement('a');
+a.href=url;a.download=nombre;document.body.appendChild(a);a.click();a.remove();
+setTimeout(()=>URL.revokeObjectURL(url),1000);
+mostrar('Página descargada: '+nombre);
+}
+
+function guardar(){
+localStorage.setItem('generadorITSAO_v10',JSON.stringify(datos()));
+mostrar('Datos guardados en este navegador.');
+}
+function cargar(){
+const d=JSON.parse(localStorage.getItem('generadorITSAO_v10')||'null');
+if(!d){mostrar('No hay datos guardados.');return}
+Object.keys(d).forEach(k=>{
+const e=document.getElementById(k);
+if(e)e.value=Array.isArray(d[k])?d[k].join('\n'):d[k];
+});
+actualizar();mostrar('Datos cargados.');
+}
+function restablecer(){location.reload()}
+function mostrar(t){
+const s=document.getElementById('status');s.textContent=t;s.style.display='block';
+setTimeout(()=>s.style.display='none',2500);
+}
+actualizar();
+</script>
+</body>
+</html>

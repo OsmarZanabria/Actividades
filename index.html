@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Actividades académicas de Ingeniería Electrónica - ITSAO">
+<title>Actividades Académicas | ITSAO</title>
+<style>
+:root{--azul:#0b3d91;--azul2:#1565c0;--claro:#eaf3ff;--texto:#263238;--gris:#607d8b;--fondo:#f4f7fb;--blanco:#fff;--borde:#dce5ef}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--texto);background:var(--fondo)}
+header{background:linear-gradient(135deg,var(--azul),var(--azul2));color:#fff;padding:48px 20px 42px;text-align:center}
+.badge{display:inline-block;padding:7px 14px;border:1px solid rgba(255,255,255,.35);border-radius:20px;font-size:14px;margin-bottom:15px;background:rgba(255,255,255,.1)}
+header h1{margin:0 0 10px;font-size:clamp(30px,5vw,48px)}
+header p{margin:0;font-size:18px;opacity:.92}
+.container{width:min(1100px,92%);margin:30px auto 50px}
+.welcome{background:var(--blanco);border:1px solid var(--borde);border-radius:16px;padding:25px 28px;box-shadow:0 5px 18px rgba(20,50,90,.07);margin-bottom:30px}
+.welcome h2{margin:0 0 10px;color:var(--azul)}
+.welcome p{margin:0;line-height:1.7;text-align:justify}
+.section-title{color:var(--azul);margin:30px 0 15px;font-size:28px}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--borde);border-radius:16px;padding:24px;box-shadow:0 5px 18px rgba(20,50,90,.07);transition:.2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 9px 24px rgba(20,50,90,.12)}
+.icon{width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:var(--claro);border-radius:14px;font-size:28px;margin-bottom:15px}
+.card h3{margin:0 0 10px;color:#1d3557;font-size:22px}
+.card p{margin:0 0 18px;color:#546e7a;line-height:1.6}
+.activity{margin-top:14px;padding-top:14px;border-top:1px solid var(--borde);font-size:14px}
+.activity a{color:var(--azul2);font-weight:bold;text-decoration:none}
+.activity a:hover{text-decoration:underline}
+.status{display:inline-block;background:#eef1f4;color:#607d8b;padding:9px 13px;border-radius:8px;font-size:14px;font-weight:bold}
+.info{margin-top:30px;background:#fff;border-left:5px solid var(--azul2);border-radius:10px;padding:18px 20px;border-top:1px solid var(--borde);border-right:1px solid var(--borde);border-bottom:1px solid var(--borde);line-height:1.6}
+footer{text-align:center;padding:25px 15px;background:#e9eef5;color:#607d8b;font-size:14px}
+@media(max-width:600px){header{padding:35px 15px}.welcome{padding:20px}.card{padding:20px}}
+</style>
+</head>
+<body>
+<header>
+<div class="badge">ITSAO · Ingeniería Electrónica</div>
+<h1>Actividades Académicas</h1>
+<p>Material, ejercicios, prácticas y evidencias para estudiantes</p>
+</header>
+
+<main class="container">
+<section class="welcome">
+<h2>Bienvenidos</h2>
+<p>En este sitio encontrarás las actividades académicas organizadas por asignatura. Selecciona la asignatura que deseas consultar. Las actividades se irán incorporando conforme avance el curso.</p>
+</section>
+
+<h2 class="section-title">📚 Asignaturas</h2>
+<div class="subject-grid">
+
+<article class="card">
+<div class="icon">💻</div>
+<h3>Algoritmos</h3>
+<p>Actividades, ejercicios y prácticas de la asignatura Algoritmos y Lenguajes de Programación.</p>
+<span class="status">Actividades por agregar</span>
+</article>
+
+<article class="card">
+<div class="icon">🤖</div>
+<h3>Robótica</h3>
+<p>Actividades, prácticas y recursos correspondientes a la asignatura de Tópicos Selectos de Robótica.</p>
+<div class="activity">
+<strong>Actividad disponible:</strong><br>
+<a href="Robotica/Tema%202/Actividad%201/Actividad%201%20%E2%80%93%20T2.html">Actividad 1 – Tema 2</a>
+</div>
+</article>
+
+<article class="card">
+<div class="icon">📡</div>
+<h3>Telecomunicaciones</h3>
+<p>Actividades y prácticas de Introducción a las Telecomunicaciones.</p>
+<span class="status">Actividades por agregar</span>
+</article>
+
+<article class="card">
+<div class="icon">🖥️</div>
+<h3>Programación Visual</h3>
+<p>Actividades, ejercicios y recursos de Programación Visual para el desarrollo de interfaces y aplicaciones.</p>
+<span class="status">Actividades por agregar</span>
+</article>
+
+</div>
+
+<section class="info">
+<strong>📌 Importante:</strong>
+Revisa periódicamente este sitio para consultar nuevas actividades, instrucciones, fechas de entrega y recursos proporcionados por el docente.
+</section>
+</main>
+
+<footer>
+Ingeniería Electrónica · Instituto Tecnológico Superior de Acatlán de Osorio (ITSAO)
+</footer>
+</body>
+</html>
